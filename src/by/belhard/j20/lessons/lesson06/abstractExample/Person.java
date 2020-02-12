@@ -1,8 +1,8 @@
-package by.belhard.j20.lessons.lesson05.task2;
+package by.belhard.j20.lessons.lesson06.abstractExample;
 
 import java.util.Objects;
 
-public class Person {
+public abstract class Person implements Workable {
 
   private String name;
   private int age;
@@ -12,9 +12,12 @@ public class Person {
     this.age = age;
   }
 
-  public void doWork() {
-    System.out.println(name + " is doing nothing");
+  @Override
+  public void notDoWork() {
+    System.out.println("not");
   }
+
+  //  public abstract void doWork();
 
   public int growOld() {
     return ++age;
