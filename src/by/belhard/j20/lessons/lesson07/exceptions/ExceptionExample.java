@@ -9,10 +9,16 @@ public class ExceptionExample {
     result = a / b;
     /*try {
       result = a / b;
-    } catch (ArithmeticException e) {
+//      String[] strings = new String[1];
+//      System.out.println(strings[2]);
+    } catch (ArithmeticException | NullPointerException e) {
       e.printStackTrace();
+//      System.exit(0);
+      return -1;
     } catch (Exception e) {
       System.err.println();
+    } finally {
+      return -2;
     }*/
 
     return result;

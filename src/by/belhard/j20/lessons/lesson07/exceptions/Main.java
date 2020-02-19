@@ -8,12 +8,12 @@ public class Main {
 
     int res = 0;
 
-    try {
+//    try {
       res = exceptionExample.div(5, 0);
-    } catch (ArithmeticException e) {
+    /*} catch (ArithmeticException e) {
       System.err.println("ERROR");
       res = 100;
-    }
+    }*/
 
     System.out.println(res);
   }
