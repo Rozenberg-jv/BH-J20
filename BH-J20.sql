@@ -6,7 +6,7 @@ drop table employees;
 create table employees (
 	id int primary key auto_increment,
     `name` varchar(50) not null unique,
-    date date default '2020-01-01',
+    date date default '2020-01-01',0
     salary int CHECK (salary > 0),
     specialty varchar(50)
 );
