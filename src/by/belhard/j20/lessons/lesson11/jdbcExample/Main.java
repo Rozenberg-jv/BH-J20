@@ -17,9 +17,10 @@ public class Main {
       e.printStackTrace();
     }
 
-    if (list != null)
+    if (list != null) {
       list.forEach(System.out::println);
-    else
+//      list.forEach(e -> System.out.println(e));
+    } else
       System.out.println("Empty list");
 
     Specialty specialty1 = list.get(0).getSpecialty();
