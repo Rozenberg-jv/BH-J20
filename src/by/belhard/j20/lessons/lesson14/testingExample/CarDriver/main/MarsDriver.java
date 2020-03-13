@@ -1,5 +1,6 @@
 package by.belhard.j20.lessons.lesson14.testingExample.CarDriver.main;
 
+import by.belhard.j20.lessons.lesson14.testingExample.CarDriver.main.exceptions.InvalidRouteException;
 import by.belhard.j20.lessons.lesson14.testingExample.CarDriver.main.model.Point;
 import by.belhard.j20.lessons.lesson14.testingExample.CarDriver.main.model.Route;
 
@@ -27,7 +28,7 @@ public class MarsDriver {
 	public void passRoute(Route route) {
 
 		if (route.getPoints().size() == 0)
-			return;
+			throw new InvalidRouteException();
 
 		position.setPosition(route.getPoints().get(route.getPoints().size() - 1));
 		distancePassed += position.getDistance(route.getPoints().get(0)) + route.getRouteLength();
